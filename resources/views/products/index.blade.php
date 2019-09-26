@@ -11,6 +11,7 @@
                         <thead>
                             <tr>
                                 <th>Title</th>
+                                <th>Image</th>
                                 <th>Created At</th>
                                 <th>Status</th>
                                 <th>Action</th>
@@ -18,7 +19,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td> <a href="/listing/id">Posting Title</a> </td>
+                                <td> <a href="/product/id">Posting Title</a> </td>
+                                <td> <img src="https://dummyimage.com/400x400/000/fff" width="100px"alt=""> </td>
                                 <td>23 Oct 2019</td>
                                 <td> <span class="badge badge-primary">Sold</span> </td>
                                 <td>

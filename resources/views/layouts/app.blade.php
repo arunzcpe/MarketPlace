@@ -36,17 +36,17 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Mobile Phones</a>
-                              <a class="dropdown-item" href="#">Electronics</a>
-                              <a class="dropdown-item" href="#">Furniture</a>
-                              <a class="dropdown-item" href="#">Fashion</a>
+                                <a class="dropdown-item" href="/?category=mobile">Mobile Phones</a>
+                               <a class="dropdown-item" href="/?category=electronics">Electronics</a>
+                               <a class="dropdown-item" href="/?category=furniture">Furniture</a>
+                               <a class="dropdown-item" href="/?category=fashion">Fashion</a>
                             </div>
                          </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Listing</a>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href="#">All Listing</a>
-                              <a class="dropdown-item" href="#">New Listign</a>
+                              <a class="dropdown-item" href="#">New Listing</a>
                             </div>
                          </li>
                         <li class="nav-item dropdown">

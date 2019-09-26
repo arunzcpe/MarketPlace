@@ -18,7 +18,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td> <a href="/listing/id">Posting Title</a> </td>
+                                <td> <a href="/product/id">Posting Title</a> </td>
                                 <td>23 Oct 2019</td>
                                 <td> <span class="badge badge-primary">Sold</span> </td>
                                 <td>

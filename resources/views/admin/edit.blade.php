@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center">
-                <img src="http://lorempixel.com/200/200" alt="...">
+                <img src="https://dummyimage.com/400x400/000/fff" alt="...">
             </div>
             <div class="card mb-3">
               <div class="card-body">
