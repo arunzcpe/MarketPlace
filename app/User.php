@@ -36,4 +36,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    #User and Product has OneToMany Relationship
+    public function product() 
+    {
+        return $this->hasMany("App\Product");
+    }
+
+    #User and Comments has OneToMany Relationship
+    public function comment() 
+    {
+        return $this->hasMany("App\Comment");
+    }
+
+    #User and Roles has ManyToMany Relationship
+    public function roles()
+    {
+        return $this->belongsToMany("App\Role");
+    }
+
 }
