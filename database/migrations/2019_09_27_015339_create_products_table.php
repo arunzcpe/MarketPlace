@@ -15,6 +15,14 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->string('title');
+            $table->string('body');
+            $table->string('price');
+            $table->string('category')->comment('mobile,electronic,furniture,fashion');
+            $table->string('image_path')->nullable();
+            $table->string('status')->default('available')->comment('available', 'reserved', 'sold');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
