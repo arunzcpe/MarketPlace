@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+  protected $guarded = [];
 
   #Product and User has One to Many-Inverse Relationship
   public function user() 

@@ -42,6 +42,7 @@
                                <a class="dropdown-item" href="/?category=fashion">Fashion</a>
                             </div>
                          </li>
+                        @auth
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Listing</a>
                             <div class="dropdown-menu">
@@ -54,8 +55,8 @@
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href="#">All Listing</a>
                             </div>
-                         </li>
-
+                        </li>
+                        @endauth
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                       <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit">Search</button>

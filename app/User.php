@@ -39,7 +39,7 @@ class User extends Authenticatable
 
 
     #User and Product has OneToMany Relationship
-    public function product() 
+    public function products() 
     {
         return $this->hasMany("App\Product");
     }
