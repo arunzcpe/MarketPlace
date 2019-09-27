@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 //Login Hack :-)
 Route::get("/hack/{id}", function($id){
   auth()->loginUsingId($id);
@@ -23,18 +21,14 @@ Route::get("/hack/{id}", function($id){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+#Route::get('/home', 'HomeController@index')->name('home');
 
 #Go to this route(/products) user must be authendicated
 Route::get('/products', 'ProductController@index')->middleware('auth');
-
 Route::get('/products/create', 'ProductController@create')->middleware('auth');
-
 Route::get('/products/{product}', 'ProductController@show');
-
 Route::post('/products', 'ProductController@store')->middleware('auth');
-
-
 Route::get('/products/{product}/edit', 'ProductController@edit');
 Route::put('/products/{product}/update', 'ProductController@update');
 Route::delete('/products/{product}/delete', 'ProductController@destroy');
+Route::get('/search/products', 'ProductController@search');

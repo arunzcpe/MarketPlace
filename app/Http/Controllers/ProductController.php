@@ -129,4 +129,21 @@ class ProductController extends Controller
         #Return back to the list page
         return redirect('/products');
     }
+
+    public function search()
+    {
+       
+       $products = Product::query();
+
+       if( request()->has('search'))
+       {
+            $products = $products->where('title', 'LIKE' , '%'.request()->search.'%')
+                                ->orwhere('status', 'LIKE' , '%'.request()->search.'%')
+                                ->orwhere('category', 'LIKE' , '%'.request()->search.'%');   
+       }
+       $products = $products->latest()->paginate(4);
+
+       //Send to view welcome
+        return view('welcome', ['products' => $products]);
+    }
 }

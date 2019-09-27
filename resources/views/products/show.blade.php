@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center">
-                <img src="https://dummyimage.com/400x400/000/fff" alt="...">
+                <img src="{{ $product->image_path != null ? asset(str_replace('public','storage', $product->image_path)) : "https://dummyimage.com/400x400/000/fff" }}" alt="">
             </div>
             <div class="card mb-3">
               <div class="card-body">

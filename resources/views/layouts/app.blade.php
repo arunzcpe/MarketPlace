@@ -58,9 +58,9 @@
                         </li>
                         @endauth
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
+                    <form class="form-inline my-2 my-lg-0" action="/search/products">
                       <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit">Search</button>
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
                     </form>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

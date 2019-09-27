@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+       #All user can login this page     
+       //$this->middleware('auth');
     }
 
     /**
@@ -23,6 +25,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //Fetch all the products
+        //$products = Product::latest()->paginate(8);
+        $products = Product::query();
+
+        #Check whether request has a category
+        if(request()->has('category')) {
+            # If request has a category, append the where condn
+            $products = $products->where('category', request()->category);
+        }
+
+        $products = $products->latest()->paginate(6);    
+        //Send to view welcome
+        return view('welcome', ['products' => $products]);
+
     }
 }
