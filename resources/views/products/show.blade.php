@@ -24,11 +24,12 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <form class="" action="" method="post">
+                        <form class="" action="/comments/{{ $product->id }}" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="">Comment</label>
-                                <textarea name="name" class="form-control" rows="8" cols="80"></textarea>
-                                <a href="#" class="btn btn-primary mt-2">Add Comment</a>
+                                <textarea name="body" class="form-control" rows="8" cols="80"></textarea>
+                                <button type="submit" name="button" class="btn btn-primary mt-2">Add Comment</button>
                             </div>
                         </form>
                     </div>
@@ -38,17 +39,17 @@
                 <div class="card mt-4">
                     <div class="card-body">
                         <h4>All Comments</h4>
-                        @for ($i=0; $i < 10; $i++)
+                        @foreach($product->comments as $comment)
                             <div class="card mt-3">
                                 <div class="card-header">
-                                    User name
-                                    <span class="float-right">23 Jan 2019</span>
+                                   {{ $comment->user->name }}
+                                    <span class="float-right">{{ $comment->created_at->diffForHumans() }}</span>
                                 </div>
                                 <div class="card-body">
-
+                                     {{ $comment->body }}   
                                 </div>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                 </div>
             </div>

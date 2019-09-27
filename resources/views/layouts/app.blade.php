@@ -50,12 +50,15 @@
                               <a class="dropdown-item" href="#">New Listing</a>
                             </div>
                          </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">All Listing</a>
-                            </div>
-                        </li>
+                            {{-- Custom Blade --}}
+                            @role('admin')
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">All Listing</a>
+                                    </div>
+                                </li>
+                            @endrole
                         @endauth
                     </ul>
                     <form class="form-inline my-2 my-lg-0" action="/search/products">

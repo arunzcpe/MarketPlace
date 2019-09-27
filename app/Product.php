@@ -15,8 +15,8 @@ class Product extends Model
   }
 
   #Product and Comment has One to Many Relationship
-  public function comment() 
+  public function comments() 
   {
-    return $this->hasMany("App\Comments");
+    return $this->hasMany("App\Comment");
   }
 }

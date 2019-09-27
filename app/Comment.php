@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    //
+    protected $guarded = [];
 
     #Comment and Product has One to Many-Inverse Relationship
     public function product() 
